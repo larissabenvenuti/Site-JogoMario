@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <title>Super Mario</title>
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="/css/overrideBootstrap.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="layout-cabecalho">
+      <nav class="navbar">
+        <div class="nav-menu">
+          <ul class="menu">
+            <li class="menu__obj"><a href="#">Início</a></li>
+            <li class="menu__obj"><a href="/pages/about.html">Sobre</a></li>
+            <li class="menu__obj"><a href="pages/characters.html">Personagens</a></li>
+            <li class="menu__obj"><a href="#sns">Redes Sociais</a></li>
+          </ul>
+        </div>
+        <img src="/img/menu2.gif" alt="Menu" class="menu-logo" />
+      </nav>
+    </header>
+
+       <div class="carrossel">
+      <div class="carrossel-slides">
+        <!-- Criando as "bolinhas" do radio -->
+        <input type="radio" name="carrossel-radio-btn" id="carrossel-radio1" />
+        <input type="radio" name="carrossel-radio-btn" id="carrossel-radio2" />
+        <input type="radio" name="carrossel-radio-btn" id="carrossel-radio3" />
+        <input type="radio" name="carrossel-radio-btn" id="carrossel-radio4" />
+        <!-- Criado para receber as imagens em cada div respectiva -->
+        <div class="carrosel-imagem first">
+          <img src="./img/carrossel1.jpg" alt="Carrossel 1" />
+        </div>
+
+        <div class="carrossel-imagem">
+          <img src="./img/carrossel2.jpg" alt="Carrossel 2" />
+        </div>
+        <div class="carrossel-imagem">
+          <img src="./img/carrossel3.jpg" alt="Carrossel 3" />
+        </div>
+        <div class="carrossel-imagem">
+          <img src="./img/carrossel4.jpg" alt="Carrossel 4" />
+        </div>
+        <!-- Criado para configurar como será feita a navegação automática -->
+        <div class="carrossel-navigation-auto">
+          <div class="carrossel-auto-btn1"></div>
+          <div class="carrossel-auto-btn2"></div>
+          <div class="carrossel-auto-btn3"></div>
+          <div class="carrossel-auto-btn4"></div>
+        </div>
+      </div>
+
+      <!-- Criado para configurar como será feita a navegação manual -->
+      <div class="carrossel-manual-navigation">
+        <!-- Criando labels para referencias nos radios e atribuir funções -->
+        <label for="carrossel-radio1" class="carrossel-manual-btn"></label>
+        <label for="carrossel-radio2" class="carrossel-manual-btn"></label>
+        <label for="carrossel-radio3" class="carrossel-manual-btn"></label>
+        <label for="carrossel-radio4" class="carrossel-manual-btn"></label>
+      </div>
+    </div>
+
+    <main>
+      <section class="pre-registro">
+        <div class="container">
+          <button class="pre-registro_botao btn" onclick="mostrarPreRegistro()">
+            Pré-registro
+          </button>
+        </div>
+
+        <div id="formulario" class="pre-registro_formulario">
+          <form method="post" class="form">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 formulario_item">
+                  <label>Nome:</label>
+                  <input
+                    type="text"
+                    name="nome"
+                    placeholder="insira seu nome"
+                  />
+                </div>
+                <div class="col-12 formulario_item">
+                  <label>e-mail:</label>
+                  <input
+                    type="text"
+                    name="e-mail"
+                    placeholder="insira seu e-mail"
+                  />
+                </div>
+                <div class="col-12 formulario_item">
+                  <label>Pais:</label>
+                  <select name="pais">
+                    <option value="Outro" name="Outros">Outros</option>
+                    <option value="Alemanha" name="Alemanha">Alemanha</option>
+                    <option value="Japão" name="Japão">Japão</option>
+                    <option value="Brasil" name="Brasil">Brasil</option>
+                    <option value="EUA" name="EUA">EUA</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="pre-registro_botao-enviar_container">
+              <button class="pre-registro_botao-enviar btn">ENVIAR</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="fases">
+        <div class="fases_descricao">
+          <p>Varias fases para você jogar!</p>
+        </div>
+        <div class="container">
+          <img class="img1" src="img/fase1.png" alt="Fase do Mario 1" />
+          <img class="img2" src="img/fase2.png" alt="Fase do Mario 1" />
+          <img class="img3" src="img/fase3.png" alt="Fase do Mario 1" />
+          <img class="img4" src="img/fase4.png" alt="Fase do Mario 1" />
+          <img class="img5" src="img/fase5.png" alt="Fase do Mario 1" />
+          <img class="img6" src="img/fase6.png" alt="Fase do Mario 1" />
+        </div>
+      </section>
+
+      <section id="sns" class="redes_sociais">
+        <div class="botoes_redes">
+          <a href="https://www.nintendo.com">
+            <button class="btn botao-rede-social">
+              <img
+                src="/img/nintendo.png"
+                alt="Logo Nintendo"
+                class="nintendo"
+              />
+              Nintendo
+            </button>
+          </a>
+          <a href="https://www.instagram.com">
+            <button class="btn botao-rede-social">
+              <img
+                src="/img/instagram.png"
+                alt="Logo Instagram"
+                class="instagram"
+              />
+              Instagram
+            </button>
+          </a>
+          <a href="https://www.youtube.com">
+            <button class="btn botao-rede-social">
+              <img src="/img/youtube.png" alt="Logo Youtube" class="youtube" />
+              Youtube
+            </button>
+          </a>
+        </div>
+      </section>
+    </main>
+    <div clas="layout_up">
+      <a class="up_botao" href="#"
+        ><img src="/img/up.png" alt="Mario apontando para cima"
+      /></a>
+    </div>
+    <footer class="layout_rodape">
+      <p class="rodape_copyhight">&copy grupo 2</p>
+    </footer>
+    <script src="/js/pre-registro.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

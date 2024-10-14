@@ -1,0 +1,68 @@
+html {
+  --red-m: #e70112;
+  --dark-red-m: #b20418;
+  --blue-m: #30a3f9;
+  --dark-blue-m: #426ac3;
+  --gren-m: #24ca7a;
+  --dark-green: #1da869;
+  --yellow-m: #ffdf02;
+  --dark-yellow-m: #fec300f8;
+  --peach-m: #f096be;
+  --dark-peach: #ff6898;
+  --gray-m: #fafafa;
+  --dark-gray-m: #e2dddd;
+  --yoshi-m: #70b921;
+  --dark-yoshi-m: #50a00f;
+  --shadow-m: #b1a9a9;
+}
+.layout-temp > img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  top: 135px;
+}
+.temp-card {
+  position: relative;
+  top: 135px;
+  width: 500px;
+  height: 750px;
+  margin: 20px auto;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fafafa;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.tituloJogo {
+  color: #e70112;
+  width: 400px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.anoLancamento {
+  color: #b20418;
+  width: 400px;
+  height: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.descricaoJogo {
+  width: 400px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container_linhaTempo{
+  margin-bottom: 200px;
+
+}

@@ -1,0 +1,160 @@
+html{
+    --red-m: #e70112;
+    --dark-red-m: #b20418;
+    --blue-m: #30a3f9;
+    --dark-blue-m: #426ac3;
+    --gren-m: #24ca7a;
+    --dark-green: #1da869;
+    --yellow-m: #ffdf02;
+    --dark-yellow-m: #fec300f8;
+    --peach-m: #f096be;
+    --dark-peach: #ff6898;
+    --gray-m: #fafafa;
+    --dark-gray-m: #e2dddd;
+    --yoshi-m: #70b921;
+    --dark-yoshi-m: #50a00f;
+    --shadow-m: #cec5c5;
+}
+
+.layout-cabecalho {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-width: 700px;
+    background-color: var(--red-m); 
+    border: 1px solid var(--dark-green);
+    border-radius: 25px;
+    font-size: 200%;
+    font-weight: 700;
+    margin: 1%;
+    z-index: 1;
+}
+
+/* Estilizando o carrossel que engloba tudo */
+.carrossel {
+  justify-content: center;
+  position: relative;
+  top: 135px;
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  border-radius: 80px;
+  /* Aqui eu escondo as outras imagens */
+  overflow: hidden;
+}
+
+.carrossel-btn img {
+  width: 100px; /* Ajuste o tamanho do ícone */
+  height: auto;
+}
+/* Estilizando div que engloba os radios e as imagens */
+.carrossel-slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.carrossel-slides input {
+  display: none;
+}
+/* O tamanho total do carrossel com as imagens está em 400%. Por isso, cada uma ocupará 25% do valor total; */
+.carrossel-imagem {
+  width: 25%;
+  position: relative;
+  transition: 2s;
+}
+/* Aqui eu encaixo cada imgem no tamanho certo do parametrizado para o carrossel todo */
+.carrossel-slides img {
+  width: 800px;
+}
+
+.carrossel-manual-navigation {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+/* Aplicando configurações e estilo nos botões para passar as imagens */
+.carrossel-manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+/* Aplicando configuração de margem com exceção do último circulo */
+.carrossel-manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* Aplicando cor ao passar o mouse em cima */
+.carrossel-manual-btn:hover {
+  background-color: #fff;
+}
+
+/* Manipulando quando cada item está com o estado de check.
+Se tiver ativo e for o primeiro, começa na primeira.
+Se não, passa pra esquerda.*/
+#carrossel-radio1:checked ~ .first {
+  margin-left: 0;
+}
+#carrossel-radio2:checked ~ .first {
+  margin-left: -25%;
+}
+#carrossel-radio3:checked ~ .first {
+  margin-left: -50%;
+}
+#carrossel-radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+/*Configurando radio de navegação automática - cada um. Por isso o div no final */
+.carrossel-navigation-auto div {
+  border: 2px solid blue;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+/* Configurando os radios de navegação automática  */
+.carrossel-navigation-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+/* Aplicando a mesma configuração de margem com exceção do último círculo que fiz no manual 
+Por isso o div no final*/
+.carrossel-navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* Aplicando verificação de checkagem para aplicar a cor branca quando a imagem 
+for trocada automáticamente e o radio ficar branco.
+Acesso cada radio + o seletor + */
+#carrossel-radio1:checked ~ .carrossel-navigation-auto .carrossel-auto-btn1 {
+  background-color: #fff;
+}
+
+#carrossel-radio2:checked ~ .carrossel-navigation-auto .carrossel-auto-btn2 {
+  background-color: #fff;
+}
+#carrossel-radio3:checked ~ .carrossel-navigation-auto .carrossel-auto-btn3 {
+  background-color: #fff;
+}
+#carrossel-radio4:checked ~ .carrossel-navigation-auto .carrossel-auto-btn4 {
+  background-color: #fff;
+}
+
+.layout_rodape{
+  color: white;
+  background-color: var(--gren-m);
+  height: 100px;
+  text-align: center;
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+}

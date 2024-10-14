@@ -1,0 +1,8 @@
+.navbar {
+  padding: 0px;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+

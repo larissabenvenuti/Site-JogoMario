@@ -1,0 +1,37 @@
+html{
+    --red-m: #e70112;
+    --dark-red-m: #b20418;
+    --blue-m: #30a3f9;
+    --dark-blue-m: #426ac3;
+    --gren-m: #24ca7a;
+    --dark-green: #1da869;
+    --yellow-m: #ffdf02;
+    --dark-yellow-m: #fec300f8;
+    --peach-m: #f096be;
+    --dark-peach: #ff6898;
+    --gray-m: #fafafa;
+    --dark-gray-m: #e2dddd;
+    --yoshi-m: #70b921;
+    --dark-yoshi-m: #50a00f;
+    --shadow-m: #cec5c5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--gray-m);
+  background-image: url(/img/background_site.jpg);
+  font-family: "Dosis";
+  font-weight: 600;
+  margin: auto;
+}
+
+@media (max-width: 900px){
+  .layout-cabecalho{
+    width: 800px;
+    line-height: 3;
+  }
+  .menu-logo {
+    display: none;
+  }
+}
